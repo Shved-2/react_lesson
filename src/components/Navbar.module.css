@@ -1,0 +1,13 @@
+.nav{
+    grid-area: n;
+    background-color: chocolate;
+    color: #000;
+  }
+.item{
+  color:  yellow;
+  margin: 10px 0 0 10px;
+}  
+.activ{
+  font-weight: bold;
+  font-style: italic;
+}
