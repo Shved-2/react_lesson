@@ -15,8 +15,8 @@ class MyPosts extends React.Component {
           <button>Remuve</button>
             </div>
         <div className={classes.post}>
-          <Post />
-          <Post />
+          <Post message="ну вот как то так" like="20"/>
+          <Post message="довольно не плохо получилось" like="7"/>
           <Post />
           <Post />
           <Post />
