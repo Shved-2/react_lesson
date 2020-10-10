@@ -1,5 +1,6 @@
 import React from 'react';
 import classes from'./Profiles.module.css';
+import MyPost from './myPosts/MyPost';
 
 class Profiles extends React.Component {
   render() {
@@ -13,17 +14,9 @@ class Profiles extends React.Component {
         <div>
           ava + description
           </div>
-        <div>
-          My post
-
-            <div>
-            New post
-            </div>
-          <div className={classes.post}>
-            <div className={classes.item}>Post 1</div>
-            <div className={classes.item}>Post 2</div>
-          </div>
-        </div>
+          
+          <MyPost />
+        
       </div>
     );
   }

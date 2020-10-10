@@ -1,8 +1,8 @@
 import React from 'react';
 import './App.css';
-import Header from './components/Header';
-import NavBar from './components/Navbar';
-import Profiles from './components/Profiles';
+import Header from '../header/Header';
+import NavBar from '../navbar/Navbar';
+import Profiles from '../profiles/Profiles';
 
 class App extends React.Component {
   render() {
