@@ -6,11 +6,11 @@ class NavBar extends React.Component {
     return (
 
       <nav className={cl.nav}>
-        <div className={cl.item}><a>Profile</a></div>
-        <div className={`${cl.item} ${cl.activ}`}><a>Message</a></div>
-        <div className={cl.item}><a>Profile</a></div>
-        <div className={cl.item}><a>Profile</a></div>
-        <div className={cl.item}><a>Profile</a></div>
+        <div className={cl.item}><a href="/profiles">Profile</a></div>
+        <div className={`${cl.item} ${cl.activ}`}><a href="/dialogs">Message</a></div>
+        <div className={cl.item}><a href="/news">News</a></div>
+        <div className={cl.item}><a href="/setting">Setting</a></div>
+        <div className={cl.item}><a href="/inoe">Inoe</a></div>
       </nav>
 
     );
