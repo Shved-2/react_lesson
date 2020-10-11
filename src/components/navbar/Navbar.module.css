@@ -1,13 +1,9 @@
 .nav{
-    grid-area: n;
-    background-color: chocolate;
-    color: #000;
-  }
+    background: rgb(55, 165, 147);
+    
+}
 .item{
-  color:  yellow;
-  margin: 10px 0 0 10px;
-}  
-.activ{
-  font-weight: bold;
-  font-style: italic;
+    color: violet;
+    font-size: 20px;
+    margin-left: 10px;
 }
