@@ -3,6 +3,7 @@ import './App.css';
 import Header from '../header/Header';
 import NavBar from '../navbar/Navbar';
 import Profiles from '../profiles/Profiles';
+import Dialog from '../dialogs/Dialog';
 
 class App extends React.Component {
   render() {
@@ -10,7 +11,11 @@ class App extends React.Component {
       <div className="App">
         <Header />
         <NavBar />
-        <Profiles />
+        <div className="App-content">
+        {/*<Profiles />*/}
+        {/*<Dialog />*/}
+        <Dialog />
+        </div>
         
       </div>
     );
