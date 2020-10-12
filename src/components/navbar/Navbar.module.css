@@ -2,8 +2,12 @@
     background: rgb(55, 165, 147);
     
 }
-.item{
+.item a{
     color: violet;
     font-size: 20px;
     margin-left: 10px;
+    text-decoration: none;
+}
+.active{
+     font-weight: bold;
 }
