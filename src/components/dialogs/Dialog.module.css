@@ -9,7 +9,7 @@
     
 
 }
-.dialog{
+.dialog a{
     margin-top: 5px;
     color: rgb(228, 74, 82);
     font-weight: 500;
@@ -17,6 +17,9 @@
 .active{
     font-weight: bold;
     text-shadow: 1px 1px  rgb(68, 67, 67);
+}
+a{
+    text-decoration: none;
 }
  
 .messages{
