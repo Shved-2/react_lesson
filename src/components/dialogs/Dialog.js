@@ -2,38 +2,45 @@ import React from 'react';
 import cl from './Dialog.module.css';
 import { NavLink } from 'react-router-dom';
 
+
+
+const DialogItem = (props) => {
+  return (
+    <div className={cl.dialog}>
+      <NavLink to={"/dialogs/"+props.id} activeClassName={cl.active}>{props.name}</NavLink>
+    </div>
+  )
+}
+
+const Message =(props) =>{
+  return(
+  <div className={cl.message}>{props.message}</div>
+  )
+}
+
 class Dialog extends React.Component {
   render() {
     return (
       <div className={cl.dialogs}>
         <div className={cl.dialogItem}>
-          <div className={cl.dialog + ' ' + cl.active}>
-            <NavLink to="/dialogs/1">Николай</NavLink>
-          </div>
-          <div className={cl.dialog}>
-            <NavLink to="/dialogs/2">Наталья</NavLink>
-          </div>
-          <div className={cl.dialog}>
-            <NavLink to="/dialogs/3">Василий</NavLink>
-          </div>
-          <div className={cl.dialog}>
-            <NavLink to="/dialogs/4"> Екатерина</NavLink>
-          </div>
-          <div className={cl.dialog}>
-            <NavLink to="/dialogs/5">Петр</NavLink>
-          </div>
-          <div className={cl.dialog}>
-            <NavLink to="/dialogs/6">Светлана</NavLink>
-          </div>
-          <div className={cl.dialog}>
-            <NavLink to="/dialogs/7">Сергей</NavLink>
-          </div>
+
+          <DialogItem  name="Вячеслав" id="21"/>
+          <DialogItem  name="Николай" id="1"/>
+          <DialogItem  name="Наталья" id="2"/>
+          <DialogItem  name="Василий" id="3"/>
+          <DialogItem  name="Екатерина" id="4"/>
+          <DialogItem  name="Петр" id="5"/>
+          <DialogItem  name="Светлана" id="6"/>
+          <DialogItem  name="Сергей" id="7"/>
+
+          
+          
 
         </div>
         <div className={cl.messages}>
-          <div className={cl.message}>Че каво?</div>
-          <div className={cl.message}>привет , ну как то ттак, ничего очобенного</div>
-          <div className={cl.message}>Ну давай . мног не давай</div>
+          <Message message="Че каво?"/>
+          <Message message="привет , ну как то ттак, ничего очобенного"/>
+          <Message message="Ну давай . мног не давай"/>
 
         </div>
 

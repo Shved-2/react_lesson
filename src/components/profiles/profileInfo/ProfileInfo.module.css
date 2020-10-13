@@ -1,0 +1,13 @@
+.content{
+    grid-area: c;
+    background-color: gainsboro;
+}
+  
+.content img{
+    width: 100%;
+    height: 200px;
+}
+
+.descriprion{
+    padding-left: 10px;
+}
