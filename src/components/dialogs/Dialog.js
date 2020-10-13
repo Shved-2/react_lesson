@@ -37,31 +37,26 @@ class Dialog extends React.Component {
       { message: "йоу", id: 4 },
       { message: "йоу", id: 5 }
     ]
+
+    let DialogElement = dialogData.map((d) => {
+      return (
+        <DialogItem name={d.name} id={d.id} />
+      )
+    })
+
+    let MessageElement = messagesData.map((m) => {
+      return (
+        <Message message={m.message} />
+      )
+    })
     return (
       <div className={cl.dialogs}>
         <div className={cl.dialogItem}>
-
-          <DialogItem name={dialogData[0].name} id={dialogData[0].id} />
-          <DialogItem name={dialogData[1].name} id={dialogData[1].id} />
-          <DialogItem name={dialogData[2].name} id={dialogData[2].id} />
-          <DialogItem name={dialogData[3].name} id={dialogData[3].id} />
-          <DialogItem name={dialogData[4].name} id={dialogData[4].id} />
-          <DialogItem name={dialogData[5].name} id={dialogData[5].id} />
-          <DialogItem name={dialogData[6].name} id={dialogData[6].id} />
-          <DialogItem name={dialogData[7].name} id={dialogData[7].id} />
-
-
-
-
-
+          {DialogElement}
         </div>
+        
         <div className={cl.messages}>
-          <Message message={messagesData[0].message} />
-          <Message message={messagesData[1].message} />
-          <Message message={messagesData[2].message} />
-          <Message message={messagesData[3].message} />
-          <Message message={messagesData[4].message} />
-
+          {MessageElement}
         </div>
 
       </div>
