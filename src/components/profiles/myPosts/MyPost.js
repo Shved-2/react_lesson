@@ -4,6 +4,12 @@ import Post from './Post/Post';
 
 class MyPosts extends React.Component {
   render() {
+
+    const postData = [
+      {id: 1 , message: "ну вот как то так", like: 32 },
+      {id: 2, message: "довольно не плохо получилось", like: 2 }
+    ]
+
     return (
       <div className={cl.content}>
         <h3>My posts</h3>
@@ -18,8 +24,8 @@ class MyPosts extends React.Component {
           
             </div>
         <div className={cl.post}>
-          <Post message="ну вот как то так" like="20"/>
-          <Post message="довольно не плохо получилось" like="7"/>
+          <Post message={postData[0].message} like={postData[0].like}/>
+          <Post message={postData[1].message} like={postData[1].like}/>
           <Post />
           <Post />
           <Post />
