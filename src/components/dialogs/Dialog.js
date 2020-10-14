@@ -1,22 +1,10 @@
 import React from 'react';
 import cl from './Dialog.module.css';
 import { NavLink } from 'react-router-dom';
+import DialogItem from './dialogItem/DialogItem';
+import Message from './message/Message';
 
 
-
-const DialogItem = (props) => {
-  return (
-    <div className={cl.dialog}>
-      <NavLink to={"/dialogs/" + props.id} activeClassName={cl.active}>{props.name}</NavLink>
-    </div>
-  )
-}
-
-const Message = (props) => {
-  return (
-    <div className={cl.message}>{props.message}</div>
-  )
-}
 
 class Dialog extends React.Component {
   render() {
@@ -49,6 +37,7 @@ class Dialog extends React.Component {
         <Message message={m.message} />
       )
     })
+
     return (
       <div className={cl.dialogs}>
         <div className={cl.dialogItem}>
