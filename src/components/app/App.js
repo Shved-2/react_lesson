@@ -17,11 +17,11 @@ class App extends React.Component {
         <Header />
         <NavBar />
         <div className="App-content">
-          <Route path="/profiles" component={Profiles}/>
-          <Route path="/dialogs" component={Dialog}/>
-          <Route path="/news" component={News}/>
-          <Route path="/music" component={Music}/>
-          <Route path="/setting" component={Setting}/>
+          <Route path="/profiles" component={ ()=><Profiles />}/>
+          <Route path="/dialogs" component={ ()=><Dialog />}/>
+          <Route path="/news" component={ ()=><News />}/>
+          <Route path="/music" component={ ()=><Music />}/>
+          <Route path="/setting" component={ ()=><Setting />}/>
         </div>
         
       </div>
