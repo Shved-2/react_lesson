@@ -11,7 +11,10 @@ class DialogItem extends React.Component {
     let pr = this.props;
     return (
       <div className={cl.dialog}>
-        <NavLink to={"/dialogs/" + pr.id} activeClassName={cl.active}>{pr.name}</NavLink>
+        <NavLink to={"/dialogs/" + pr.id} activeClassName={cl.active}>
+          <img src="https://avatarko.ru/img/kartinka/9/muzhchina_shlyapa_8746.jpg" />
+          {pr.name}
+        </NavLink>
       </div>
     )
   }

@@ -1,6 +1,7 @@
 import React from 'react';
 import cl from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
+import  Frends from './frend/Frends';
 
 class NavBar extends React.Component {
   render() {
@@ -21,6 +22,8 @@ class NavBar extends React.Component {
         <div className={cl.item}>
           <NavLink to="/setting" activeClassName={cl.active}>Setting</NavLink>
         </div>
+
+        <Frends />
 
       </nav>
 

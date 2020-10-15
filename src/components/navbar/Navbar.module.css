@@ -1,11 +1,14 @@
 .nav{
     background: rgb(55, 165, 147);
+    padding-top: 20px;
+    height: 100vh;
+
     
 }
 .item a{
     color: rgb(206, 203, 48);
     font-size: 20px;
-    margin-left: 10px;
+    margin-left: 30px;
     text-decoration: none;
 }
 .active{
