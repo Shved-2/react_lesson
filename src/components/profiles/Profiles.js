@@ -5,10 +5,11 @@ import ProfileInfo from './profileInfo/ProfileInfo';
 
 class Profiles extends React.Component {
   render() {
+    let posts = this.props.posts;
     return (
       <div >
         <ProfileInfo />
-        <MyPost />
+        <MyPost posts={posts}/>
       </div>
     );
   }

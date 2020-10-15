@@ -5,12 +5,8 @@ import Post from './Post/Post';
 class MyPosts extends React.Component {
   render() {
 
-    const posts = [
-      { id: 1, message: "ну вот как то так", like: 32 },
-      { id: 2, message: "довольно не плохо получилось", like: 2 },
-      { id: 2, message: "три поросенка", like: 10 },
-      { id: 2, message: "во всем виноват Навальный", like: 175 }
-    ]
+    
+    let posts = this.props.posts;
 
     let postsElement = posts.map((p) => {
       return (
