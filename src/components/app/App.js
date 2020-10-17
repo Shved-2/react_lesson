@@ -14,16 +14,17 @@ class App extends React.Component {
     let messagesData = this.props.state.messagesPage.messagesData;
     let dialogData = this.props.state.messagesPage.dialogData;
     let posts = this.props.state.profilePage.posts;
+    //let frends = this.props.state.frendPage;
 
     return (
-      <BrowserRouter>
+      
         <div className="App">
           <Header />
-          <NavBar />
+          <NavBar  /*frends={frends}*//>
           <div className="App-content">
             <Route path="/profiles"
               component={() => <Profiles
-                posts={posts} />} />
+                posts={posts}  />} />
 
             <Route path="/dialogs"
               component={() => <Dialog
@@ -40,7 +41,7 @@ class App extends React.Component {
           </div>
 
         </div>
-      </BrowserRouter>
+      
     );
   }
 }

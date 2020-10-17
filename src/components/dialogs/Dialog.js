@@ -24,6 +24,11 @@ class Dialog extends React.Component {
         <Message message={m.message} />
       )
     })
+    let newPost = React.createRef();
+    let addPost = (() => {
+      let text = newPost.current.value;
+      alert(text);
+    })
 
     return (
       <div className={cl.dialogs}>
@@ -33,6 +38,14 @@ class Dialog extends React.Component {
         
         <div className={cl.messages}>
           {MessageElement}
+          <div>
+          <div>
+          <textarea ref={newPost}></textarea>
+        </div>
+        <div>
+          <button onClick={addPost}>отправить</button>
+        </div>
+          </div>
         </div>
 
       </div>

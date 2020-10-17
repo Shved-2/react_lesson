@@ -29,7 +29,16 @@ let state = {
       { name: "Сергей", id: 8 }
     ]
 
-  }
+  },
+/*
+  frends= {
+    frend: {
+      name: "Вася",
+      name: "Петр",
+      name: "Николай"
+    }
+  }*/
+
 
 
 

@@ -5,6 +5,7 @@ import  Frends from './frend/Frends';
 
 class NavBar extends React.Component {
   render() {
+    //let frends = this.props.frends;
     return (
 
       <nav className={cl.nav}>
@@ -23,7 +24,7 @@ class NavBar extends React.Component {
           <NavLink to="/setting" activeClassName={cl.active}>Setting</NavLink>
         </div>
 
-        <Frends />
+        <Frends /*frends={frends}*//>
 
       </nav>
 
