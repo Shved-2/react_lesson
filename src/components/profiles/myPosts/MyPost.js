@@ -18,8 +18,9 @@ class MyPosts extends React.Component {
     let newPost = React.createRef();//данные из textarea
     
     let addPost = () => {    
-      debugger;  
-      let text = newPost.current.value;      
+      
+      let text = newPost.current.value;  
+      newPost.current.value = '';    
       addPost1(text);
     }
     
