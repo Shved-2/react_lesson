@@ -11,37 +11,41 @@ import { Route, BrowserRouter } from 'react-router-dom';
 
 class App extends React.Component {
   render() {
+    //const App =(props)=>{
     let messagesData = this.props.state.messagesPage.messagesData;
     let dialogData = this.props.state.messagesPage.dialogData;
     let posts = this.props.state.profilePage.posts;
     //let frends = this.props.state.frendPage;
-
+    let addPost =this.props.addPost;
+    
     return (
-      
-        <div className="App">
-          <Header />
-          <NavBar  /*frends={frends}*//>
-          <div className="App-content">
-            <Route path="/profiles"
-              component={() => <Profiles
-                posts={posts}  />} />
 
-            <Route path="/dialogs"
-              component={() => <Dialog
-                messagesData={messagesData} dialogData={dialogData} />} />
+      <div className="App">
+        <Header />
+        <NavBar  /*frends={frends}*/ />
+        <div className="App-content">
+          <Route path="/profiles"
+            render={() => <Profiles
+              posts={posts}
+              addPost={addPost} 
+              />} />
 
-            <Route path="/news"
-              component={() => <News />} />
+          <Route path="/dialogs"
+            render={() => <Dialog
+              messagesData={messagesData} dialogData={dialogData} />} />
 
-            <Route path="/music"
-              component={() => <Music />} />
+          <Route path="/news"
+            render={() => <News />} />
 
-            <Route path="/setting"
-              component={() => <Setting />} />
-          </div>
+          <Route path="/music"
+            render={() => <Music />} />
 
+          <Route path="/setting"
+            render={() => <Setting />} />
         </div>
-      
+
+      </div>
+
     );
   }
 }

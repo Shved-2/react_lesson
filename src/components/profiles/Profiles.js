@@ -4,12 +4,16 @@ import MyPost from './myPosts/MyPost';
 import ProfileInfo from './profileInfo/ProfileInfo';
 
 class Profiles extends React.Component {
-  render() {
+  render() {  
     let posts = this.props.posts;
+    let addPost = this.props.addPost;
+    
+
+
     return (
       <div >
         <ProfileInfo />
-        <MyPost posts={posts}/>
+        <MyPost posts={posts} addPost={addPost} />
       </div>
     );
   }

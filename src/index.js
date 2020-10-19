@@ -4,7 +4,9 @@ import './index.css';
 import App from './components/app/App.js';
 import * as serviceWorker from './serviceWorker';
 import state from './redux/Redux';
+import {addPost} from './redux/Redux';
 import {BrowserRouter} from "react-router-dom";
+
 
 
 
@@ -12,7 +14,7 @@ import {BrowserRouter} from "react-router-dom";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App  state={state}/>
+    <App  state={state} addPost={addPost}/>
     </BrowserRouter>, document.getElementById('root')
 );
 

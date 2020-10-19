@@ -3,8 +3,8 @@ let state = {
     posts: [
       { id: 1, message: "ну вот как то так", like: 32 },
       { id: 2, message: "довольно не плохо получилось", like: 2 },
-      { id: 2, message: "три поросенка", like: 10 },
-      { id: 2, message: "во всем виноват Навальный", like: 175 }
+      { id: 3, message: "три поросенка", like: 10 },
+      { id: 4, message: "во всем виноват Навальный", like: 175 }
     ]
 
   },
@@ -28,21 +28,19 @@ let state = {
       { name: "Светлана", id: 7 },
       { name: "Сергей", id: 8 }
     ]
-
-  },
-/*
-  frends= {
-    frend: {
-      name: "Вася",
-      name: "Петр",
-      name: "Николай"
-    }
-  }*/
-
-
-
-
+  }
 }
+
+export let addPost = ((postMessage)=>{
+ debugger;
+
+  let newPost ={
+    id:5,
+    message: (postMessage),
+    like: 0
+  }
+  state.profilePage.posts.push(newPost);
+})
 
 
 

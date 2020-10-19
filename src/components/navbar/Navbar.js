@@ -1,11 +1,19 @@
 import React from 'react';
 import cl from './Navbar.module.css';
 import { NavLink } from 'react-router-dom';
-import  Frends from './frend/Frends';
+import Frends from './frends/Frends';
 
 class NavBar extends React.Component {
   render() {
-    //let frends = this.props.frends;
+    let frends = {
+      frend: [
+        { name: "Вася" },
+        { name: "Петр" },
+        { name: "Николай" }
+      ]
+    }
+
+
     return (
 
       <nav className={cl.nav}>
@@ -24,7 +32,7 @@ class NavBar extends React.Component {
           <NavLink to="/setting" activeClassName={cl.active}>Setting</NavLink>
         </div>
 
-        <Frends /*frends={frends}*//>
+        <Frends frends={frends} />
 
       </nav>
 

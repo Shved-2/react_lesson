@@ -6,19 +6,22 @@ class MyPosts extends React.Component {
   render() {
 
 
-    let posts = this.props.posts;
-
+    let posts = this.props.posts;//принимаем массив с постами на страницу(текст+лайки)
+    //размещаем посты из массива на страницу
     let postsElement = posts.map((p) => {
       return (
         <Post message={p.message} like={p.like} />
       )
     });
-
-    let newPost = React.createRef();
-    let addPost = (() => {
-      let text = newPost.current.value;
-      alert(text);
-    })
+    let addPost1 = this.props.addPost;
+    
+    let newPost = React.createRef();//данные из textarea
+    
+    let addPost = () => {    
+      debugger;  
+      let text = newPost.current.value;      
+      addPost1(text);
+    }
     
 
     return (
@@ -32,7 +35,7 @@ class MyPosts extends React.Component {
           <div>
             <button onClick={addPost}> Add post </button>
           </div>
-          <div><button>Remuve</button></div>
+          
         </div>
 
         <div className={cl.post}>
